@@ -1,30 +1,17 @@
-# Gilded Rose starting position in Java
+# Gilded Rose Testing Strategy
 
-## Run the TextTest Fixture from Command-Line
+1. Testing the normal items and refactoring the code to make it easier to read.
+2. Testing the special items.
+3. Testing edge cases such as a negative sellIn for sulfuras, which should not happen.
 
-```
-./gradlew -q text
-```
+For every test, there is a respective negative test.
 
-### Specify Number of Days
+## Test Coverage
+- Normal Items
+- Aged Brie
+- Backstage Passes
+- Sulfuras
+- Edge Cases
 
-For e.g. 10 days:
-
-```
-./gradlew -q text --args 10
-```
-
-You should make sure the gradle commands shown above work when you execute them in a terminal before trying to use TextTest (see below).
-
-
-## Run the TextTest approval test that comes with this project
-
-There are instructions in the [TextTest Readme](../texttests/README.md) for setting up TextTest. What's unusual for the Java version is there are two executables listed in [config.gr](../texttests/config.gr) for Java. The first uses Gradle wrapped in a python script. Uncomment these lines to use it:
-
-    executable:${TEXTTEST_HOME}/Java/texttest_rig.py
-    interpreter:python
-
-The other relies on your CLASSPATH being set correctly in [environment.gr](../texttests/environment.gr). Uncomment these lines to use it instead:
-
-    executable:com.gildedrose.TexttestFixture
-    interpreter:java
+## Challenges
+- Understanding initial code logic and refactoring.
